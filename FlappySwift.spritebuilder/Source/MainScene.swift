@@ -25,9 +25,7 @@ class MainScene: GameplayScene {
     var _scoreLabel: CCLabelTTF!
     var _nameLabel: CCLabelTTF!
     
-    var trail: CCParticleSystem? = nil
-    var physicsNode: CCPhysicsNode!
-    var points: Int = 0
+//    var physicsNode: CCPhysicsNode!
   
     var g1Pos: CGPoint!
     var g2Pos: CGPoint!
@@ -43,7 +41,7 @@ class MainScene: GameplayScene {
         
         for ground in _grounds {
             // set collision type
-            ground.physicsBody.collisionType = "ground"
+            ground.physicsBody.collisionType = "level"
             ground.zOrder = DrawingOrder.Ground.rawValue
         }
         
@@ -66,12 +64,12 @@ class MainScene: GameplayScene {
         super.initialize()
     }
     
-    override func addToScene(node: CCNode?) {
-        if let cNode = node {
-            physicsNode.addChild(node)
-        }
-    }
-    
+//    override func addToScene(node: CCNode?) {
+//        if let cNode = node {
+//            physicsNode.addChild(node)
+//        }
+//    }
+  
     override func showScore() {
         _scoreLabel.visible = true
     }
@@ -82,12 +80,14 @@ class MainScene: GameplayScene {
     
     func handleTouch() {
         if !_gameOver {
+            self.touchBegan()
             if let cCharacter = character {
-                cCharacter.physicsBody.applyAngularImpulse(10000.0)
+                if cCharacter.physicsBody.velocity.y > 0
+                {
+                    cCharacter.physicsBody.applyAngularImpulse(10000.0)
+                }
             }
             _sinceTouch = 0.0
-            
-            self.tap()
         }
     }
     
@@ -104,6 +104,7 @@ class MainScene: GameplayScene {
     override func gameOver() {
         if !_gameOver {
             _gameOver = true
+            timeSinceObstacle = 0
             if let cRestartButton = _restartButton {
                 cRestartButton.visible = true
             }
@@ -158,21 +159,21 @@ class MainScene: GameplayScene {
         }
     }
     
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair, character nodeA: CCNode, level nodeB: CCNode) -> ObjCBool {
-        self.collisionWithObstacle()
-        return false
-    }
-    
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair, character nodeA: CCNode, ground nodeB: CCNode) -> ObjCBool {
-        self.collisionWithObstacle()
-        return true
-    }
-    
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair, character nodeA: CCNode, goal nodeB: CCNode) -> ObjCBool {
-        self.passedObstacle()
-        return false
-    }
-    
+//    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair, character nodeA: CCNode, level nodeB: CCNode) -> ObjCBool {
+//        self.collisionWithObstacle()
+//        return false
+//    }
+  
+//    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair, character nodeA: CCNode, ground nodeB: CCNode) -> ObjCBool {
+//        self.collisionWithObstacle()
+//        return true
+//    }
+  
+//    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair, character nodeA: CCNode, goal nodeB: CCNode) -> ObjCBool {
+//        self.passedObstacle()
+//        return false
+//    }
+  
     override func increaseScore() {
         points++
         self.updateScore()

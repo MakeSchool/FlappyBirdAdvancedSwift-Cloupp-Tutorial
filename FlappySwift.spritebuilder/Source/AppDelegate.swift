@@ -19,7 +19,7 @@ class AppDelegate: CCAppDelegate, UIApplicationDelegate {
         let cocos2dSetup: NSMutableDictionary! = NSMutableDictionary(contentsOfFile:CCFileUtils.sharedFileUtils().fullPathFromRelativePath("configCocos2d.plist"));
         
         setupCocos2dWithOptions(cocos2dSetup);
-        
+
         return true
     }
     

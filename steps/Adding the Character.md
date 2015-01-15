@@ -1,7 +1,8 @@
 Creating the Character
 ===================
 
-We've created a Character class for you to use and imported it at the top of the file.
+We've created a Character class for you to use. 
+
 To create the character, add the following line to the ```initialize``` method where it says
 ```// put your initialization code below this line```:
 

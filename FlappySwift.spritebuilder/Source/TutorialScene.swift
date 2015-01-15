@@ -16,11 +16,15 @@ enum DrawingOrder: Int {
 
 class TutorialScene: CCNode, CCPhysicsCollisionDelegate {
     var character: Character!
+    var physicsNode: CCPhysicsNode!
+    var points: Int = 0
+    var trail: CCParticleSystem? = nil
+
+
+    func touchBegan() { }
     
-    func tap() { }
-    
-    func addToScene(node: CCNode?) {}
-    
+//    func addToScene(node: CCNode?) {}
+  
     func addObstacle() {}
     
     func showScore() {}

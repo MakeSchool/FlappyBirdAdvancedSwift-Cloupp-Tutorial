@@ -1,7 +1,7 @@
 The First Obstacle
 ==================
 
-So far our character is moving and jumping but it's not really fun yet. Lets add obstacles
+So far our character is moving and jumping but it's not really fun yet. Let's add obstacles
 for you to avoid!
 
 For that we have created a simple method for you: ```addObstacle``` To use it, in your ```initialize```
@@ -14,7 +14,7 @@ Then run the game. You should see a random obstacle appear!
 More Obstacles
 ==============
 
-Now that we have one obstacle, lets add more! To do that, lets add a new variable to keep track of time passed. At the top,
+Now that we have one obstacle, let's add more! To do that, let's add a new variable to keep track of time passed. At the top,
 below where it says ```// put variables below this line```, add the following:
 
 	var timeSinceObstacle:CCTime = 0
