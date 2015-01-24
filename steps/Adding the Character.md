@@ -24,7 +24,7 @@ Basic Syntax
 Swift syntax for declaring and calling functions is similar to languages like C++ and Java. 
 
 * To call a method: ```ObjectName.methodName()```
-     * For example: ```character.jump()```
+* For example: ```character.jump()```
 
 * To call a method and pass a parameter: ```ObjectName.methodName(parameter)```
-    * For example: ```self.addChild(character)```
+* For example: ```self.addChild(character)```
