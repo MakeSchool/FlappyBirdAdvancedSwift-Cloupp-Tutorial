@@ -24,8 +24,6 @@ class MainScene: GameplayScene {
     var _gameOver:Bool = false
     var _scoreLabel: CCLabelTTF!
     var _nameLabel: CCLabelTTF!
-    
-//    var physicsNode: CCPhysicsNode!
   
     var g1Pos: CGPoint!
     var g2Pos: CGPoint!
@@ -51,7 +49,7 @@ class MainScene: GameplayScene {
         powerups = []
         points = 0
         
-        trail = CCBReader.load("Trail") as CCParticleSystem?
+        trail = CCBReader.load("Trail") as CCParticleSystem
         if let c_trail = trail {
             c_trail.particlePositionType = CCParticleSystemPositionType.Relative
             physicsNode.addChild(trail)
@@ -147,18 +145,26 @@ class MainScene: GameplayScene {
         _obstacles.append(obstacle)
     }
 
+  
+  //Currently broken, Cocos2D needs to be updated for the spritebuilder file to work.
     override func addPowerup() {
         let powerup:CCSprite = CCBReader.load("Powerup") as CCSprite
-        
+      if _obstacles.count > 1 {
         let first:Obstacle = _obstacles[0]
         let second:Obstacle = _obstacles[1]
         if let cLast:Obstacle = _obstacles.last {
-            if let cCharacter = character {
-                powerup.position = CGPoint(x:cLast.position.x + (second.position.x-first.position.x)/4.0 + cCharacter.contentSize.width, y:CGFloat(arc4random()%488)+200)
-            }
+          if let cCharacter = character {
+            powerup.position = CGPoint(x:cLast.position.x + (second.position.x-first.position.x)/4.0 + cCharacter.contentSize.width, y:CGFloat(arc4random()%488)+100)
+            powerup.physicsBody.sensor = true
+            powerup.zOrder = DrawingOrder.Pipes.rawValue
+            physicsNode.addChild(powerup)
+            powerups.append(powerup)
+
+          }
         }
+      }
     }
-    
+  
 //    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair, character nodeA: CCNode, level nodeB: CCNode) -> ObjCBool {
 //        self.collisionWithObstacle()
 //        return false

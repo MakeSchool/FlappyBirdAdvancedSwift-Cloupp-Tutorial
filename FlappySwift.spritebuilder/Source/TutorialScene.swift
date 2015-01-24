@@ -18,7 +18,7 @@ class TutorialScene: CCNode, CCPhysicsCollisionDelegate {
     var character: Character!
     var physicsNode: CCPhysicsNode!
     var points: Int = 0
-    var trail: CCParticleSystem? = nil
+    var trail: CCParticleSystem!
 
 
     func touchBegan() { }
