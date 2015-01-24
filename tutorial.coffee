@@ -11,7 +11,5 @@ exports.Tutorial = () ->
 
 exports.Preprocess = (files) ->
   path        = "FlappySwift.spritebuilder/Source/GameplayScene.swift"
-  files[path] = files[path].replace /func(\s+\w*tap[\s\S]+?{)/igm, "override func$1"
-  files[path] = files[path].replace /func(\s+\w*collisionWithObstacle[\s\S]+?{)/igm, "override func$1"
-  files[path] = files[path].replace /func(\s+\w*passedObstacle[\s\S]+?{)/igm, "override func$1"
+  files[path] = files[path].replace /func(\s+\w*touchBegan[\s\S]+?{)/igm, "override func$1"
   files[path] = files[path].replace /func(\s+\w*update[\s\S]+?{)/igm, "override func$1"

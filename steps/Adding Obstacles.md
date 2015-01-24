@@ -8,13 +8,13 @@ For that we have created a simple method for you: ```addObstacle``` To use it, i
 method, simply add:
 
 	self.addObstacle()
-	
+
 Then run the game. You should see a random obstacle appear!
 
 More Obstacles
 ==============
 
-Now that we have one obstacle, let's add more! We've set up the variable```timeSinceObstacle``` of type ```CCTime``` for you. In the ```initialize``` function, set it to ```0```:
+Now that we have one obstacle, let's add more! We've set up the variable ```timeSinceObstacle``` of type ```CCTime``` for you. In the ```initialize``` function, set it to ```0```:
 
 	timeSinceObstacle = 0
 
@@ -29,7 +29,7 @@ This time in your ```update``` function, try adding:
 	{
 		// Add a new obstacle
 		self.addObstacle()
- 		
+
 		// Then reset the timer.
 		timeSinceObstacle = 0
 	}

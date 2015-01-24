@@ -12,12 +12,10 @@ player health, whether enemies have died, or whether something should move!
 In order to create an update loop, you need to add a new method. Below the
 closing bracket of your ```touchBegan``` method, but before the closing bracket of the GameplayScene class, add:
 
-	override func update(delta: CCTime)
+	func update(delta: CCTime)
 	{
 		// this will be run every frame.
 		// delta is the time that has elapsed since the last time it was run.	}
-
-You need to add the ```override``` before the ```func``` keyword in this case, because we are overriding the superclass ```update``` function.
 
 Making the Character Move
 =============

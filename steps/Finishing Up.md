@@ -10,9 +10,9 @@ but before the closing bracket of the GameplayScene class:
 	func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character nodeA: CCNode!, level nodeB: CCNode!) -> Bool
 	{
 		self.gameOver()
-    		return true
-    	}
-    
+    return true
+  }
+
 Keeping Score
 =============
 
@@ -33,10 +33,10 @@ but before the closing bracket of the GameplayScene class:
 	{
 		goal.removeFromParent() //vs self.increaseScore
 		points++
-    		self.updateScore()
-    		return true
-    	}
-    	
+    self.updateScore()
+    return true
+  }
+
 Run the game again and you should see your finished Flappy Bird game! Congratulations - you've
 built your first iPhone game!
 
