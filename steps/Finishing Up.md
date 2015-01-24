@@ -7,7 +7,7 @@ between the character and an obstacle (or the ground). Like touches, we need ano
 Add the following below the closing bracket of your ```update``` method,
 but before the closing bracket of the GameplayScene class:
 
-	func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character nodeA: CCNode!, level nodeB: CCNode!) -> Bool
+	func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair, character nodeA: CCNode, level nodeB: CCNode) -> ObjCBool
 	{
 		self.gameOver()
 		return true
@@ -29,7 +29,7 @@ the pipes.
 Add the following below the closing bracket of your ```ccPhysicsCollisionBegin``` function,
 but before the closing bracket of the GameplayScene class:
 
-	func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, character nodeA: CCNode!, goal: CCNode!) -> Bool
+	func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair, character nodeA: CCNode, goal nodeB: CCNode) -> ObjCBool
 	{
 		goal.removeFromParent() //vs self.increaseScore
 		points++
