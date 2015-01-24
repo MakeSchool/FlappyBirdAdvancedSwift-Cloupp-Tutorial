@@ -1,52 +1,53 @@
-Basic Syntax
-============
-
-Swift syntax for declaring and calling methods follows a pattern similar to many languages such as Java or Python, although the specifics are a little bit different.
-
-To call a method: ```ObjectName.methodNameToCall()```
-For example: ```character.jump()```
-To call a method and pass a parameter: ```ObjectName.methodName(parameter)```
-For example: ```self.addChild(character)```
-
-
-Make the Bird Flap!
-=======================
-For your game to respond to input, we have to write a new method to be run whenever the player taps the screen. Add the following after the closing bracket of the init method but before the final closing bracket of the program:
-
-	func tap()
-	{
-		// this will get called every time the player
-		// taps the screen.
-	}
-
-Now that we have code that is run every time the player taps the screen, we want to make the bird flap. Inside your ```tap``` method, add the following code:
-
-    character.flap()
-
-Now run the game again. This time, try to tap on the screen to see the bird flap!
-
-Method Syntax
+Function Syntax
 =============
 
-As we've seen in the ```tap``` method, you can creating methods in Swift using the ```func```. ("func" stands for "function", which is another name for a method.)
+To declare a function in Swift, follow the following format:
 
-	func nameOfMethod()
+	func functionName(firstParameter: parameterType, secondParameter: parameterType) -> returnType 
 	{
-        // ... put as many lines of code here as you want
-	}
+		//Body of function	}
 
-The above method does not accept any parameters, and doesn't return any values. Methods that take in parameters and return a value use the following syntax:
+The labels are optional, but are useful for adding clarity. 
 
-	func nameOfMethod(firstParameter : typeOfFirstParameter, secondParameter : typeOfSecondParameter) -> returnType
+For example, to declare a method that does not return anything and does not accept any parameters:
+
+	func printHelloWorld()
 	{
-		// ... any code needed to compute myReturnValue
-		return myReturnValue
-	}
+		println("Hello World!")	}
 
-Here's one more example method. This one returns an Int and accepts a String:
+Or, to declare a method that returns an int and accepts a string:
 
-    func doSomethingWithAString(myString : String) -> Int
-    {
-        // returns the length of the string times ten
-        return myString.utf16Count * 10
-    }
+	func doSomethingWithAString(myString: String)
+	{
+		//returns the number of characters in the string times 10
+		return countElements(myString) * 10	}
+
+Or, to declare a method that returns an array and accepts multiple strings:
+
+	func makeAnArrayOfStrings(firstString: String, secondString: String, thirdString: String) -> [String]
+	{
+		return [firstString, secondString, thirdString]	}
+
+Adding a jump!
+=======================
+
+For your game to respond to input, we have to write a new function to be run whenever
+the player touches the screen. Add the following after the closing bracket of the initialize function
+but before the closing bracket of the GameplayScene class:
+
+	func touchBegan()
+	{
+		// this will get called every time the player
+		// touches the screen.	}
+
+Now that we have code that is run every time the player touches the screen, we want to make
+the character jump. To do that, we need to add a physics impulse. Inside your ```touchBegan```
+function, add the following code:
+
+	var impulse = 200 - 2 * character.physicsBody.velocity.y
+	character.physicsBody.applyImpulse(CGPoint(x:0, y:impulse))
+
+Here the impulse is a vector pointing straight up, because it is zero in the x-direction. You can modify how far up the character
+goes by modifying the ```200```.
+
+Now run the game again. This time, try to click on the screen to see the fly jump up!

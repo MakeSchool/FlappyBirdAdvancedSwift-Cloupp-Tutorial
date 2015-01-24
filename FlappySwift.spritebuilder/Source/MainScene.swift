@@ -86,7 +86,9 @@ class MainScene: GameplayScene {
                 }
             }
             _sinceTouch = 0.0
-        }
+        } else {
+          restart()
+      }
     }
     
     #if os(iOS)
@@ -102,7 +104,7 @@ class MainScene: GameplayScene {
     override func gameOver() {
         if !_gameOver {
             _gameOver = true
-            timeSinceObstacle = 0
+//            timeSinceObstacle = 0
             if let cRestartButton = _restartButton {
                 cRestartButton.visible = true
             }

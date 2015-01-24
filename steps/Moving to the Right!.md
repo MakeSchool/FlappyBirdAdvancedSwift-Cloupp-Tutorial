@@ -1,23 +1,32 @@
 Creating an Update Loop
 =============
 
-You probably noticed that your bird only goes up and down, not to the right like it should.
+So far we have only made the character move vertically. Now we want to make it
+move to the right, so it can progress through the level. Unlike jumping, we want the
+character to be constantly moving on the X axis.
 
-For this sort of logic, games typically use an "update loop." What happens is that some code is run really fast - up to 60 times per second! That code usually checks things like player health, whether enemies have died, and allows you to program actions that repeat constantly, like moving our bird to the right!
+For this sort of logic, games typically use an "update loop." What happens is that some
+code is run really fast - up to 60 times per second! That code usually checks things like
+player health, whether enemies have died, or whether something should move!
 
-In order to create an update loop, you need to add a new method. Below the closing bracket of your tap method (but above the closing bracket at the end of the program), add the following:
+In order to create an update loop, you need to add a new method. Below the
+closing bracket of your ```touchBegan``` method, but before the closing bracket of the GameplayScene class, add:
 
-    func update(delta: CCTime)
-    {
-        // This will be run every frame
-        // delta is the time that has elapsed since the last time it was run.
-    }
+	override func update(delta: CCTime)
+	{
+		// this will be run every frame.
+		// delta is the time that has elapsed since the last time it was run.	}
 
-Add the following line inside the update method:
+You need to add the ```override``` before the ```func``` keyword in this case, because we are overriding the superclass ```update``` function.
 
 Making the Character Move
-In your update method, add the following:
+=============
 
-    character.move()
+Now that we have an update loop, making the character move is easy. We just need to
+set the horizontal velocity to 80 and not change the vertical velocity.
 
-Now run the game again. You should see the character moving now!
+To do that, in your new ```update``` method, add:
+
+	character.physicsBody.velocity = CGPoint(x:80, y:character.physicsBody.velocity.y)
+
+The x-velocity is now a constant 80, while the y-velocity will remain dependent on the player's taps on the screen.
