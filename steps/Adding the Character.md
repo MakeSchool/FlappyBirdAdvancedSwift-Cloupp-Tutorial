@@ -13,15 +13,15 @@ In order for the character to appear on screen, you'll have to add it to the sce
 under where you initialized your character, write:
 
     // add the character to the scene
-    physicsNode.addChild(character)
-    
+    gamePhysicsNode.addChild(character)
+
 Now hit the run button and take a look at what you have built! You should see your
 character fall to the bottom. That's because we haven't given it any velocity yet!
 
 Basic Syntax
 ============
 
-Swift syntax for declaring and calling functions is similar to languages like C++ and Java. 
+Swift syntax for declaring and calling functions is similar to languages like C++ and Java.
 
 * To call a method: ```ObjectName.methodName()```
 * For example: ```character.jump()```

@@ -43,16 +43,16 @@ class MainScene: GameplayScene {
             ground.zOrder = DrawingOrder.Ground.rawValue
         }
         
-        physicsNode.collisionDelegate = self
+        gamePhysicsNode.collisionDelegate = self
         
         _obstacles = []
         powerups = []
         points = 0
         
-        trail = CCBReader.load("Trail") as CCParticleSystem
+        trail = CCBReader.load("Trail") as! CCParticleSystem
         if let c_trail = trail {
             c_trail.particlePositionType = CCParticleSystemPositionType.Relative
-            physicsNode.addChild(trail)
+            gamePhysicsNode.addChild(trail)
             c_trail.visible = false
         }
       
@@ -64,7 +64,7 @@ class MainScene: GameplayScene {
     
 //    override func addToScene(node: CCNode?) {
 //        if let cNode = node {
-//            physicsNode.addChild(node)
+//            gamePhysicsNode.addChild(node)
 //        }
 //    }
   
@@ -92,7 +92,7 @@ class MainScene: GameplayScene {
     }
     
     #if os(iOS)
-    override func touchBegan(touch: UITouch, withEvent event: UIEvent) {
+    override func touchBegan(touch: CCTouch, withEvent event: CCTouchEvent) {
         handleTouch()
     }
     #elseif os(OSX)
@@ -126,22 +126,22 @@ class MainScene: GameplayScene {
     }
 
     override func restart() {
-        println("RESTART");
+        print("RESTART");
         _restartButton.visible = false
         self.resetLevel()
     }
 
     override func addObstacle() {
-        let obstacle:Obstacle = CCBReader.load("Obstacle") as Obstacle
+        let obstacle:Obstacle = CCBReader.load("Obstacle") as! Obstacle
         let screenPosition = self.convertToWorldSpace(CGPoint(x:380,y:0))
-        if let cPhysicsNode = physicsNode {
+        if let cPhysicsNode = gamePhysicsNode {
             let worldPosition = cPhysicsNode.convertToNodeSpace(screenPosition)
             obstacle.position = worldPosition
         }
         obstacle.setupRandomPosition()
         
         obstacle.zOrder = DrawingOrder.Pipes.rawValue
-        if let cPhysicsNode = physicsNode {
+        if let cPhysicsNode = gamePhysicsNode {
             cPhysicsNode.addChild(obstacle)
         }
         _obstacles.append(obstacle)
@@ -150,7 +150,7 @@ class MainScene: GameplayScene {
   
   //Currently broken, Cocos2D needs to be updated for the spritebuilder file to work.
     override func addPowerup() {
-        let powerup:CCSprite = CCBReader.load("Powerup") as CCSprite
+        let powerup:CCSprite = CCBReader.load("Powerup") as! CCSprite
       if _obstacles.count > 1 {
         let first:Obstacle = _obstacles[0]
         let second:Obstacle = _obstacles[1]
@@ -159,7 +159,7 @@ class MainScene: GameplayScene {
             powerup.position = CGPoint(x:cLast.position.x + (second.position.x-first.position.x)/4.0 + cCharacter.contentSize.width, y:CGFloat(arc4random()%488)+100)
             powerup.physicsBody.sensor = true
             powerup.zOrder = DrawingOrder.Pipes.rawValue
-            physicsNode.addChild(powerup)
+            gamePhysicsNode.addChild(powerup)
             powerups.append(powerup)
 
           }
@@ -188,7 +188,7 @@ class MainScene: GameplayScene {
     }
   
     func resetLevel() {
-        physicsNode.position = CGPoint(x:0, y:0)
+        gamePhysicsNode.position = CGPoint(x:0, y:0)
         _ground1.position = g1Pos
         _ground2.position = g2Pos
         for obs in _obstacles {
@@ -234,11 +234,11 @@ class MainScene: GameplayScene {
         }
 
         if let cCharacter = character {
-            physicsNode.position = CGPoint(x:physicsNode.position.x - (cCharacter.physicsBody.velocity.x * CGFloat(delta)),y:physicsNode.position.y)
+            gamePhysicsNode.position = CGPoint(x:gamePhysicsNode.position.x - (cCharacter.physicsBody.velocity.x * CGFloat(delta)),y:gamePhysicsNode.position.y)
         }
         
         for ground in _grounds {
-            let groundWorldPosition = physicsNode.convertToWorldSpace(ground.position)
+            let groundWorldPosition = gamePhysicsNode.convertToWorldSpace(ground.position)
             let groundScreenPosition = self.convertToNodeSpace(groundWorldPosition)
             
             if groundScreenPosition.x <= (-1 * ground.contentSize.width) {
@@ -249,7 +249,7 @@ class MainScene: GameplayScene {
         var offScreenObstacles:[Obstacle] = []
         
         for obstacle in _obstacles {
-            let obstacleWorldPosition = physicsNode!.convertToWorldSpace(obstacle.position)
+            let obstacleWorldPosition = gamePhysicsNode!.convertToWorldSpace(obstacle.position)
             let obstacleScreenPosition = self.convertToNodeSpace(obstacleWorldPosition)
             
             if obstacleScreenPosition.x < -obstacle.contentSize.width {

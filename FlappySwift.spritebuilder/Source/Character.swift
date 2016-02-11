@@ -25,6 +25,6 @@ class Character: CCSprite {
     }
     
     class func createFlappy() -> Character! {
-        return CCBReader.load("Character") as Character!
+        return CCBReader.load("Character") as! Character!
     }
 }

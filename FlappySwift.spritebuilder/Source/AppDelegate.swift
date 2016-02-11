@@ -9,16 +9,16 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: CCAppDelegate, UIApplicationDelegate {
+class AppDelegate: CCAppDelegate {
     
     override func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]!) -> Bool {
         // Configure CCFileUtils to work with SpriteBuilder
         CCBReader.configureCCFileUtils()
         
         // Configure Cocos2d with the options set in SpriteBuilder
-        let cocos2dSetup: NSMutableDictionary! = NSMutableDictionary(contentsOfFile:CCFileUtils.sharedFileUtils().fullPathFromRelativePath("configCocos2d.plist"));
+        let cocos2dSetup: NSMutableDictionary = NSMutableDictionary(contentsOfFile:CCFileUtils.sharedFileUtils().fullPathFromRelativePath("configCocos2d.plist"))!;
         
-        setupCocos2dWithOptions(cocos2dSetup);
+        setupCocos2dWithOptions(cocos2dSetup as [NSObject : AnyObject]);
 
         return true
     }

@@ -17,7 +17,7 @@ enum DrawingOrder: Int {
 class TutorialScene: CCNode, CCPhysicsCollisionDelegate {
     var timeSinceObstacle: CCTime = 0
     var character: Character!
-    var physicsNode: CCPhysicsNode!
+    var gamePhysicsNode: CCPhysicsNode!
     var points: Int = 0
     var trail: CCParticleSystem!
 

@@ -117,6 +117,17 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>normalMapSpriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string></string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>color</string>
 						<key>type</key>
 						<string>Color3</string>
@@ -127,6 +138,14 @@
 							<real>1</real>
 							<real>1</real>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>effects</string>
+						<key>type</key>
+						<string>EffectControl</string>
+						<key>value</key>
+						<array/>
 					</dict>
 				</array>
 			</dict>
@@ -214,6 +233,17 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>normalMapSpriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string></string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>color</string>
 						<key>type</key>
 						<string>Color3</string>
@@ -224,6 +254,14 @@
 							<real>1</real>
 							<real>1</real>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>effects</string>
+						<key>type</key>
+						<string>EffectControl</string>
+						<key>value</key>
+						<array/>
 					</dict>
 				</array>
 			</dict>
@@ -311,6 +349,17 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>normalMapSpriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string></string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>color</string>
 						<key>type</key>
 						<string>Color3</string>
@@ -321,6 +370,14 @@
 							<real>1</real>
 							<real>1</real>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>effects</string>
+						<key>type</key>
+						<string>EffectControl</string>
+						<key>value</key>
+						<array/>
 					</dict>
 				</array>
 			</dict>
@@ -472,6 +529,17 @@
 							</dict>
 							<dict>
 								<key>name</key>
+								<string>normalMapSpriteFrame</string>
+								<key>type</key>
+								<string>SpriteFrame</string>
+								<key>value</key>
+								<array>
+									<string></string>
+									<string></string>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
 								<string>color</string>
 								<key>type</key>
 								<string>Color3</string>
@@ -482,6 +550,14 @@
 									<real>1</real>
 									<real>1</real>
 								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>effects</string>
+								<key>type</key>
+								<string>EffectControl</string>
+								<key>value</key>
+								<array/>
 							</dict>
 						</array>
 					</dict>
@@ -626,6 +702,17 @@
 							</dict>
 							<dict>
 								<key>name</key>
+								<string>normalMapSpriteFrame</string>
+								<key>type</key>
+								<string>SpriteFrame</string>
+								<key>value</key>
+								<array>
+									<string></string>
+									<string></string>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
 								<string>color</string>
 								<key>type</key>
 								<string>Color3</string>
@@ -637,6 +724,14 @@
 									<real>1</real>
 								</array>
 							</dict>
+							<dict>
+								<key>name</key>
+								<string>effects</string>
+								<key>type</key>
+								<string>EffectControl</string>
+								<key>value</key>
+								<array/>
+							</dict>
 						</array>
 					</dict>
 				</array>
@@ -645,7 +740,7 @@
 				<key>displayName</key>
 				<string>CCPhysicsNode</string>
 				<key>memberVarAssignmentName</key>
-				<string>physicsNode</string>
+				<string>gamePhysicsNode</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -729,6 +824,8 @@
 						<real>0.5</real>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
