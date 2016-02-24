@@ -19,10 +19,11 @@ void showError(NSString *message) {
 
 #define QUOTE(...) #__VA_ARGS__
 NSString *testCode = @QUOTE(
-    import Foundation; import FlappySwift; @objc(GameplayScene)
-    class GameplayScene: TutorialScene {
+    import Foundation;
+    import FlappySwift;
+    class GameplayScene: MainScene {
         
-        func initialize() {
+        public override func initialize() {
             // put your initialization code below this line
             character = Character.createFlappy();
             gamePhysicsNode.addChild(character);

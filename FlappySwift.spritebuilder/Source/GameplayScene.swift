@@ -1,9 +1,9 @@
 import Foundation;
 import FlappySwift;
 
-class GameplayScene: TutorialScene {
+class GameplayScene: MainScene {
     
-    func initialize() {
+    override func initialize() {
         // put your initialization code below this line
         
         
