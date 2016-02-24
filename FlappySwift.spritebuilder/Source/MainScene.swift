@@ -8,6 +8,12 @@
 
 import Foundation
 
+enum DrawingOrder: Int {
+    case Pipes
+    case Ground
+    case Hero
+}
+
 @objc
 class MainScene: GameplayScene {
     
@@ -61,12 +67,6 @@ class MainScene: GameplayScene {
 
         super.initialize()
     }
-    
-//    override func addToScene(node: CCNode?) {
-//        if let cNode = node {
-//            gamePhysicsNode.addChild(node)
-//        }
-//    }
   
     override func showScore() {
         _scoreLabel.visible = true

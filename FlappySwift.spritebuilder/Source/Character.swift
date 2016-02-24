@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Character: CCSprite {
+public class Character: CCSprite {
     
     func didLoadFromCCB() {
         self.position = CGPoint(x:115, y:250)
@@ -16,15 +16,15 @@ class Character: CCSprite {
         self.physicsBody.collisionType = "character"
     }
     
-    func flap() {
+    public func flap() {
         self.physicsBody.applyImpulse(CGPoint(x:0.0, y:400.0))
     }
     
-    func move() {
+    public func move() {
         self.physicsBody.velocity = CGPoint(x:80.0, y:self.physicsBody.velocity.y)
     }
     
-    class func createFlappy() -> Character! {
+    public class func createFlappy() -> Character! {
         return CCBReader.load("Character") as! Character!
     }
 }

@@ -46,7 +46,8 @@ class AppDelegate: CCAppDelegate {
     }
     
     override func startScene() -> CCScene {
-        return CCBReader.loadAsScene("MainScene");
+        CCDirector.sharedDirector().animationInterval = CCTime(1/15)
+        return Loader()
     }
 }
 

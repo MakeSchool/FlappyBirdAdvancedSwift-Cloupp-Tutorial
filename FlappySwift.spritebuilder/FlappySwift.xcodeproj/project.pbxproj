@@ -39,11 +39,13 @@
 		B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
 		B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
-		BE58971519DC799B00647263 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE58971419DC799B00647263 /* AppDelegate.m */; };
-		BE58971719DC799B00647263 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE58971619DC799B00647263 /* main.m */; };
-		BE58971919DC799B00647263 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE58971819DC799B00647263 /* Images.xcassets */; };
-		BE58971C19DC799B00647263 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE58971A19DC799B00647263 /* MainMenu.xib */; };
-		BE58972819DC799B00647263 /* FlappySwiftOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE58972719DC799B00647263 /* FlappySwiftOSXTests.m */; };
+		BC1FCBDF1C6D50F700D44906 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BC1FCBDC1C6D50F700D44906 /* LICENSE */; };
+		BC1FCBE01C6D50F700D44906 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1FCBDE1C6D50F700D44906 /* MBProgressHUD.m */; };
+		BC1FCBEC1C6D50FE00D44906 /* Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1FCBEB1C6D50FE00D44906 /* Loader.m */; };
+		BC1FCBF71C6D5AF800D44906 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1FCBDE1C6D50F700D44906 /* MBProgressHUD.m */; };
+		BC1FCBF81C6D5AFF00D44906 /* Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1FCBEB1C6D50FE00D44906 /* Loader.m */; };
+		BC1FCBF91C6D61B600D44906 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BC1FCBDC1C6D50F700D44906 /* LICENSE */; };
+		BCFC37861C7E23C4006C146F /* FlappySwift.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = BCFC37851C7E23C4006C146F /* FlappySwift.swiftmodule */; };
 		BE58973B19DC7A2D00647263 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE58973A19DC7A2D00647263 /* Foundation.framework */; };
 		BE58973D19DC7A3400647263 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE58973C19DC7A3400647263 /* AudioToolbox.framework */; };
 		BE58973F19DC7A3B00647263 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE58973E19DC7A3B00647263 /* OpenAL.framework */; };
@@ -59,7 +61,6 @@
 		BE58974F19DC7AC000647263 /* Obstacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DF0B219CE65F900B211DF /* Obstacle.swift */; };
 		BE58975019DC7AC000647263 /* GameplayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DF0AE19CE509700B211DF /* GameplayScene.swift */; };
 		BE58975119DC7AC000647263 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9256DD19D6A650009C1D57 /* Goal.swift */; };
-		BE58975719DC7B3B00647263 /* MSCaptureGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE58975619DC7B3B00647263 /* MSCaptureGLView.m */; };
 		BE58975819DC800600647263 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE58973519DC79AA00647263 /* libcocos2d.a */; };
 		BED6F72019DE37650033D84F /* TutorialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6F71F19DE37650033D84F /* TutorialScene.swift */; };
 		BED6F72119DE37650033D84F /* TutorialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6F71F19DE37650033D84F /* TutorialScene.swift */; };
@@ -79,6 +80,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5018F24C0DFDEAC400C013A5;
 			remoteInfo = cocos2d;
+		};
+		BC1FCBE41C6D50F700D44906 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7378940180761A80076A88C /* cocos2d-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2FEB74F194F6C9E00FC0574;
+			remoteInfo = cocos2dAndroid;
+		};
+		BC1FCBE61C6D50F700D44906 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7378940180761A80076A88C /* cocos2d-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7A4037A819E37038007B6E8F;
+			remoteInfo = "cocos2d-mac";
+		};
+		BC1FCBE81C6D50F700D44906 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7378940180761A80076A88C /* cocos2d-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B7E7DE341A76DB7D004234B7;
+			remoteInfo = cocos2dMacFramework;
 		};
 		BE58972219DC799B00647263 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -147,18 +169,16 @@
 		B77F1B3F17B978D7009739AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B77F1B4117B978D7009739AE /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
+		BC1FCBDC1C6D50F700D44906 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BC1FCBDD1C6D50F700D44906 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		BC1FCBDE1C6D50F700D44906 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		BC1FCBEA1C6D50FE00D44906 /* Loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Loader.h; path = Source/Loader.h; sourceTree = "<group>"; };
+		BC1FCBEB1C6D50FE00D44906 /* Loader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Loader.m; path = Source/Loader.m; sourceTree = "<group>"; };
 		BCEE6A8119E6FAE7004B9A0D /* cocos2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cocos2d.h; path = "Source/libs/cocos2d-iphone/cocos2d/cocos2d.h"; sourceTree = "<group>"; };
 		BCEE6A8419E6FB0D004B9A0D /* cocos2d-ui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "cocos2d-ui.h"; path = "Source/libs/cocos2d-iphone/cocos2d-ui/cocos2d-ui.h"; sourceTree = "<group>"; };
+		BCFC37851C7E23C4006C146F /* FlappySwift.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FlappySwift.swiftmodule"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE58970F19DC799B00647263 /* FlappySwiftOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappySwiftOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE58971219DC799B00647263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE58971319DC799B00647263 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BE58971419DC799B00647263 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BE58971619DC799B00647263 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BE58971819DC799B00647263 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BE58971B19DC799B00647263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		BE58972119DC799B00647263 /* FlappySwiftOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappySwiftOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE58972619DC799B00647263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE58972719DC799B00647263 /* FlappySwiftOSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlappySwiftOSXTests.m; sourceTree = "<group>"; };
 		BE58972F19DC79A900647263 /* cocos2d-osx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "cocos2d-osx.xcodeproj"; path = "Source/libs/cocos2d-iphone/cocos2d-osx.xcodeproj"; sourceTree = "<group>"; };
 		BE58973A19DC7A2D00647263 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		BE58973C19DC7A3400647263 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
@@ -169,8 +189,6 @@
 		BE58974619DC7A5500647263 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
 		BE58974819DC7A5A00647263 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		BE58974A19DC7A6100647263 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
-		BE58975519DC7B3B00647263 /* MSCaptureGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCaptureGLView.h; sourceTree = "<group>"; };
-		BE58975619DC7B3B00647263 /* MSCaptureGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCaptureGLView.m; sourceTree = "<group>"; };
 		BED6F71F19DE37650033D84F /* TutorialScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialScene.swift; path = Source/TutorialScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +250,7 @@
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BC1FCBDB1C6D50F700D44906 /* MBProgressHUD */,
 				BED6F71F19DE37650033D84F /* TutorialScene.swift */,
 				5D6DF0A919CE4C1D00B211DF /* AppDelegate.swift */,
 				5D6DF0B019CE5E8100B211DF /* Character.swift */,
@@ -242,6 +261,8 @@
 				5D6DF0A819CE4C1C00B211DF /* FlappySwift-Bridging-Header.h */,
 				BCEE6A8119E6FAE7004B9A0D /* cocos2d.h */,
 				BCEE6A8419E6FB0D004B9A0D /* cocos2d-ui.h */,
+				BC1FCBEA1C6D50FE00D44906 /* Loader.h */,
+				BC1FCBEB1C6D50FE00D44906 /* Loader.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -250,6 +271,9 @@
 			isa = PBXGroup;
 			children = (
 				B737894B180761A90076A88C /* libcocos2d.a */,
+				BC1FCBE51C6D50F700D44906 /* libcocos2dAndroid.a */,
+				BC1FCBE71C6D50F700D44906 /* libcocos2d-mac.a */,
+				BC1FCBE91C6D50F700D44906 /* cocos2dMacFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,12 +302,11 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
+				BCFC37851C7E23C4006C146F /* FlappySwift.swiftmodule */,
 				B737893C1807616C0076A88C /* Source */,
 				B77F1B4617B978D7009739AE /* Resources */,
 				9222E2B918734FF800A246C7 /* libs */,
 				B77F1CCF17B978D8009739AE /* Supporting Files */,
-				BE58971019DC799B00647263 /* FlappySwiftOSX */,
-				BE58972419DC799B00647263 /* FlappySwiftOSXTests */,
 				B77F1B3017B978D7009739AE /* Frameworks */,
 				B77F1B2F17B978D7009739AE /* Products */,
 			);
@@ -344,44 +367,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BE58971019DC799B00647263 /* FlappySwiftOSX */ = {
+		BC1FCBDB1C6D50F700D44906 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				BE58971319DC799B00647263 /* AppDelegate.h */,
-				BE58971419DC799B00647263 /* AppDelegate.m */,
-				BE58971819DC799B00647263 /* Images.xcassets */,
-				BE58971A19DC799B00647263 /* MainMenu.xib */,
-				BE58971119DC799B00647263 /* Supporting Files */,
-				BE58975519DC7B3B00647263 /* MSCaptureGLView.h */,
-				BE58975619DC7B3B00647263 /* MSCaptureGLView.m */,
+				BC1FCBDC1C6D50F700D44906 /* LICENSE */,
+				BC1FCBDD1C6D50F700D44906 /* MBProgressHUD.h */,
+				BC1FCBDE1C6D50F700D44906 /* MBProgressHUD.m */,
 			);
-			path = FlappySwiftOSX;
-			sourceTree = "<group>";
-		};
-		BE58971119DC799B00647263 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BE58971219DC799B00647263 /* Info.plist */,
-				BE58971619DC799B00647263 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BE58972419DC799B00647263 /* FlappySwiftOSXTests */ = {
-			isa = PBXGroup;
-			children = (
-				BE58972719DC799B00647263 /* FlappySwiftOSXTests.m */,
-				BE58972519DC799B00647263 /* Supporting Files */,
-			);
-			path = FlappySwiftOSXTests;
-			sourceTree = "<group>";
-		};
-		BE58972519DC799B00647263 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BE58972619DC799B00647263 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = MBProgressHUD;
+			path = Source/MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		BE58973019DC79A900647263 /* Products */ = {
@@ -517,6 +511,27 @@
 			remoteRef = B737894A180761A90076A88C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		BC1FCBE51C6D50F700D44906 /* libcocos2dAndroid.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcocos2dAndroid.a;
+			remoteRef = BC1FCBE41C6D50F700D44906 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC1FCBE71C6D50F700D44906 /* libcocos2d-mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libcocos2d-mac.a";
+			remoteRef = BC1FCBE61C6D50F700D44906 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC1FCBE91C6D50F700D44906 /* cocos2dMacFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = cocos2dMacFramework.framework;
+			remoteRef = BC1FCBE81C6D50F700D44906 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		BE58973519DC79AA00647263 /* libcocos2d.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -540,6 +555,7 @@
 			files = (
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
+				BCFC37861C7E23C4006C146F /* FlappySwift.swiftmodule in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
@@ -551,6 +567,7 @@
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
+				BC1FCBF91C6D61B600D44906 /* LICENSE in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
 				B71F5911188484E7003F4D28 /* iPad-old.png in Resources */,
 			);
@@ -561,8 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE58974C19DC7AB400647263 /* Published-iOS in Resources */,
-				BE58971919DC799B00647263 /* Images.xcassets in Resources */,
-				BE58971C19DC799B00647263 /* MainMenu.xib in Resources */,
+				BC1FCBDF1C6D50F700D44906 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +613,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1FCBF81C6D5AFF00D44906 /* Loader.m in Sources */,
+				BC1FCBF71C6D5AF800D44906 /* MBProgressHUD.m in Sources */,
 				5D6DF0AD19CE4C5800B211DF /* MainScene.swift in Sources */,
 				5D6DF0AF19CE509700B211DF /* GameplayScene.swift in Sources */,
 				5D6DF0B319CE65F900B211DF /* Obstacle.swift in Sources */,
@@ -615,10 +633,9 @@
 				BED6F72019DE37650033D84F /* TutorialScene.swift in Sources */,
 				BE58974E19DC7AC000647263 /* MainScene.swift in Sources */,
 				BE58974F19DC7AC000647263 /* Obstacle.swift in Sources */,
-				BE58971719DC799B00647263 /* main.m in Sources */,
 				BE58975019DC7AC000647263 /* GameplayScene.swift in Sources */,
-				BE58971519DC799B00647263 /* AppDelegate.m in Sources */,
-				BE58975719DC7B3B00647263 /* MSCaptureGLView.m in Sources */,
+				BC1FCBE01C6D50F700D44906 /* MBProgressHUD.m in Sources */,
+				BC1FCBEC1C6D50FE00D44906 /* Loader.m in Sources */,
 				BE58975119DC7AC000647263 /* Goal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,7 +644,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE58972819DC799B00647263 /* FlappySwiftOSXTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,22 +667,12 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		BE58971A19DC799B00647263 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE58971B19DC799B00647263 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		B77F1CDC17B978D8009739AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_MODULES = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -688,6 +694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_MODULES = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -713,6 +720,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
@@ -751,6 +759,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				HEADER_SEARCH_PATHS = (

@@ -8,40 +8,32 @@
 
 import Foundation
 
-enum DrawingOrder: Int {
-    case Pipes
-    case Ground
-    case Hero
-}
-
-class TutorialScene: CCNode, CCPhysicsCollisionDelegate {
-    var timeSinceObstacle: CCTime = 0
-    var character: Character!
-    var gamePhysicsNode: CCPhysicsNode!
-    var points: Int = 0
-    var trail: CCParticleSystem!
-
-    func touchBegan() { }
+public class TutorialScene: CCNode, CCPhysicsCollisionDelegate {
+    public var timeSinceObstacle: CCTime = 0
+    public var character: Character!
+    public var gamePhysicsNode: CCPhysicsNode!
+    public var points: Int = 0
+    public var trail: CCParticleSystem!
     
-//    func addToScene(node: CCNode?) {}
-  
-    func addObstacle() {}
+    public func touchBegan() { }
+      
+    public func addObstacle() {}
     
-    func showScore() {}
+    public func showScore() {}
     
-    func increaseScore() {}
+    public func increaseScore() {}
     
-    func updateScore() {}
+    public func updateScore() {}
     
-    func gameOver() {}
+    public func gameOver() {}
     
-    func addPowerup() {}
+    public func addPowerup() {}
     
-    func restart() {}
+    public func restart() {}
     
-    func collisionWithObstacle() {}
+    public func collisionWithObstacle() {}
     
-    func passedObstacle() {}
+    public func passedObstacle() {}
     
-    override func update(delta: CCTime) {}
+    override public func update(delta: CCTime) {}
 }
